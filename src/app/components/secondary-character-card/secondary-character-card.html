@@ -1,0 +1,28 @@
+<mat-card class="main-container">
+  <mat-card-content>
+
+    <section class="left">
+      <div class="image-box">
+        @if (data()?.image) {
+          <img [src]="data()?.image" alt="Estilo de combate">
+        } @else {
+          <span class="no-image">Sin imagen</span>
+        }
+      </div>
+
+      <div class="description-box">
+        <p>{{ data()?.description }}</p>
+      </div>
+    </section>
+
+    
+    <section class="right">
+      @for (character of data()?.combat_style_character; track character.id) {
+        <p>{{ character.id }} - {{ character.name }}</p>
+      } @empty {
+        <p>No hay personajes</p>
+      }
+    </section>
+
+  </mat-card-content>
+</mat-card>

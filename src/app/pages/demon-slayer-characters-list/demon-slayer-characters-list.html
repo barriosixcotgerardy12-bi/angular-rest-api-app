@@ -1,10 +1,16 @@
 <p>demon-slayer-characters-list works!</p>
 
+<app-primary-character-card>
+  <p>Progra WEB V2 </p>
+</app-primary-character-card>
+
 @for (item of getDemonSlayerCharacterList(); track item.id) {
   <app-character-card
     [data]="item"
     [type]="characterCardType.ROUNDED"
   >
+
+    <p>Progra WEB V2</p>
   </app-character-card>
 
 } @empty {

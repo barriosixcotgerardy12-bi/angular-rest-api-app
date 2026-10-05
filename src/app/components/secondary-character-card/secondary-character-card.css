@@ -1,0 +1,60 @@
+.main-container {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+/* Se escribe con .main-container para ganarle al relleno que Material pone por defecto */
+.main-container mat-card-content {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  padding: 0;
+}
+
+.left,
+.right {
+  flex: 1;
+  min-width: 0;
+}
+
+
+.left {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid lightgray;
+}
+
+.image-box {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description-box {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  border-top: 1px solid lightgray;
+}
+
+.description-box p,
+.right p {
+  margin: 8px;
+  font-size: 13px;
+}
+
+.right {
+  overflow: auto;
+}
